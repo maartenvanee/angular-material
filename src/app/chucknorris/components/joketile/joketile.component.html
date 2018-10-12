@@ -1,0 +1,4 @@
+<div class="jokeTile {{joke.favorite ? 'fav' : '' }}" data-id="{{joke.id}}">
+    <button class="favButton" (click)="toggleFavorite()">&#9733;</button>
+    <p [innerHTML]="joke.joke"></p>
+</div>
