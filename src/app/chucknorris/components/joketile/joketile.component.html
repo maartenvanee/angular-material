@@ -1,4 +1,9 @@
-<div class="jokeTile {{joke.favorite ? 'fav' : '' }}" data-id="{{joke.id}}">
+<!-- <div class="jokeTile {{joke.favorite ? 'fav' : '' }}" data-id="{{joke.id}}">
     <button class="favButton" (click)="toggleFavorite()">&#9733;</button>
     <p [innerHTML]="joke.joke"></p>
+</div> -->
+
+<div class="jokeTile">
+    <mat-checkbox class="example-margin" [disabled]="disabled" [checked]="checked"></mat-checkbox>
+    <div class="checkbox-label">{{joke.joke}}</div>
 </div>

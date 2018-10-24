@@ -1,8 +1,11 @@
 <div class="list">
     <h3>{{title}}</h3>
-    <ul>
-        <li *ngFor="let joke of jokes">
-            <joketile [joke]="joke" (onToggleFavorite)="toggleFavorite($event)"></joketile>
-        </li>
-    </ul>
+    <mat-list>
+        <ng-template ngFor let-joke [ngForOf]="jokes">
+            <mat-list-item>
+                <joketile [joke]="joke" (onToggleFavorite)="toggleFavorite($event)"></joketile>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </ng-template>
+    </mat-list>
 </div>

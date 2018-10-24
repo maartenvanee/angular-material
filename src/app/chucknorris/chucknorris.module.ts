@@ -5,13 +5,14 @@ import { ChuckNorrisService } from './chucknorris.service';
 import { ChuckNorrisPageComponent } from './pages/chucknorrispage.component';
 import { JokeListComponent } from './components/jokelist/jokelist.component';
 import { JokeTileComponent } from './components/joketile/joketile.component';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
     imports: [
-        CommonModule, HttpClientModule
+        CommonModule, HttpClientModule, MaterialModule
     ],
     declarations: [
-        ChuckNorrisPageComponent, JokeListComponent, JokeTileComponent
+        ChuckNorrisPageComponent, JokeListComponent, JokeTileComponent,
     ],
     exports: [
         ChuckNorrisPageComponent

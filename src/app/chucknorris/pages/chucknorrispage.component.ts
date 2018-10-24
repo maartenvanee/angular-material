@@ -1,12 +1,12 @@
-import { ChuckNorrisService } from './../chucknorris.service';
-import { Component, OnInit } from '@angular/core';
-import { Joke } from '../interfaces/joke.interface';
-import { JokeResponse } from '../interfaces/jokeresponse.interface';
+import { ChuckNorrisService } from "./../chucknorris.service";
+import { Component, OnInit } from "@angular/core";
+import { Joke } from "../interfaces/joke.interface";
+import { JokeResponse } from "../interfaces/jokeresponse.interface";
 
 @Component({
-    selector: 'chucknorrispage',
-    templateUrl: './chucknorrispage.component.html',
-    styleUrls: ['./chucknorrispage.component.scss']
+    selector: "chucknorrispage",
+    templateUrl: "./chucknorrispage.component.html",
+    styleUrls: ["./chucknorrispage.component.scss"]
 })
 export class ChuckNorrisPageComponent implements OnInit {
     public randomJokes: Array<Joke> = [];
@@ -28,7 +28,7 @@ export class ChuckNorrisPageComponent implements OnInit {
                 this.randomJokes = response.value;
             },
             (error: any) => {
-                console.log('error: ', error);
+                console.log("error: ", error);
             }
         );
     }
@@ -64,7 +64,7 @@ export class ChuckNorrisPageComponent implements OnInit {
     }
 
     private getStoredFavoriteJokes() {
-        const storedJokesJSON = localStorage.getItem('FavoriteJokes');
+        const storedJokesJSON = localStorage.getItem("FavoriteJokes");
         if (storedJokesJSON) {
             const jokes = JSON.parse(storedJokesJSON);
             if (jokes.length) {
@@ -81,7 +81,7 @@ export class ChuckNorrisPageComponent implements OnInit {
                 this.addJokeToFavorites(joke);
             },
             error => {
-                console.log('error: ', error);
+                console.log("error: ", error);
             }
         );
     }
@@ -109,6 +109,6 @@ export class ChuckNorrisPageComponent implements OnInit {
 
     private updateLocalStorage() {
         const favsJson: string = JSON.stringify(this.favoriteJokes);
-        localStorage.setItem('FavoriteJokes', favsJson);
+        localStorage.setItem("FavoriteJokes", favsJson);
     }
 }

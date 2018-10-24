@@ -10,6 +10,9 @@ export class JokeTileComponent {
     @Input()
     public joke: Joke;
 
+    public checked = false;
+    public disabled = false;
+
     @Output()
     public onToggleFavorite: EventEmitter<Joke> = new EventEmitter();
 

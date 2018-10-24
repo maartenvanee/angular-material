@@ -2,10 +2,10 @@
     display: inline-block;
     position: relative;
     vertical-align: top;
-    width: 50%;
+    width: 30%;
 
-    ul {
-        padding: 0;
-        list-style-type: none;
+    .mat-list-item {
+        height: auto;
+        padding: 10px;
     }
 }
